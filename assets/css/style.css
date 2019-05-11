@@ -1,6 +1,7 @@
 #titre{
 	text-align: center;
 	background-color:#8BC34A; 
+	border-radius:5px;
 }
 
 td{
@@ -66,11 +67,16 @@ td{
 }
 
 #container{
+	border-radius:5px;
+	background-color: #9BD35A;
 	display:flex;
 	flex-direction: column;
 	align-items:flex-start;
 }
 
+#boutons{
+	margin:10px auto;
+}
 #plateau{
 	display:flex;
 	justify-content: center;
@@ -84,18 +90,21 @@ td{
 }
 
 .feu {
-	margin-top:50px;
+	margin-left: auto;
+	margin-right: auto;
+
+	margin-top:5px;
 	background-color:#999;
 	border-radius: 15px;
 	border: 2px solid black;
 }
-.noir, .rouge{
+.noir, .rouge, .bleu{
 	border-radius: 15px;	
 }
 
 .noir {
 	margin:5px;
-	background-color: #8BC34A;
+	background-color: #9BD35A;
 	color:black;
 }
 .rouge{
@@ -117,6 +126,11 @@ td{
 	background-color:blue;
 	animation: clig 0.5s infinite;
 }
+
+@-webkit-keyframes clig { 
+	0%   { z-index:-1; }
+	100% { z-index:1; } 
+} 
 @keyframes clig { 
 	0%   { z-index:-1; }
 	100% { z-index:1; } 

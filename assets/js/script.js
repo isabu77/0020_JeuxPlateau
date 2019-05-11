@@ -70,7 +70,7 @@ function nomDuJoueur(numJoueur){
 
 /* création du tableau représentant le plateau de jeu */
 function creerTableau(){
-    this.texte = '<table>';
+    this.texte = '<table id="tabPlateau">';
     for (i = 0; i < this.nbLignes; i++) {
         this.texte += '<tr>';
         for (j = 0; j < this.nbColonnes; j++) {
@@ -81,6 +81,7 @@ function creerTableau(){
     }
     this.texte += '</table>';
     document.getElementById('plateau').innerHTML = this.texte;
+    document.getElementById('idfeu').style.width = document.getElementById('tabPlateau').getClientRects()[0].width + 'px';
 }
 
 /* evenement Clic sur une case */
