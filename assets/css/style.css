@@ -72,7 +72,54 @@ td{
 }
 
 #plateau{
+	display:flex;
+	justify-content: center;
 	overflow:hidden; /* extérieur de la div invisible pour que les jetons ne sortent pas du tableau*/
+}
+
+#textAnnonce{
+	margin:2px;
+	padding:2px;
+	text-align:center;
+}
+
+.feu {
+	margin-top:50px;
+	background-color:#999;
+	border-radius: 15px;
+	border: 2px solid black;
+}
+.noir, .rouge{
+	border-radius: 15px;	
+}
+
+.noir {
+	margin:5px;
+	background-color: #8BC34A;
+	color:black;
+}
+.rouge{
+	background-color:red;
+
+}
+.bleu{
+	background-color:blue;
+	
+}
+.cligRouge {
+	position: relative;
+	background-color:red;
+	animation: rouge 0.5s infinite;
+}
+
+.cligBleu {
+	position: relative;
+	background-color:blue;
+	animation: clig 0.5s infinite;
+}
+@keyframes clig { 
+	0%   { z-index:-1; }
+	100% { z-index:1; } 
 }
 
 /* déclaration de l'animation */

@@ -44,7 +44,8 @@ function newGame(jeu){
 		}
 	}
 	this.joueur = 1;
-	afficheTextAnnonce("Le jeu de " + this.nomJeu[jeu] + " commence ! <br/>C'est au tour du joueur " + nomDuJoueur(this.joueur));
+	afficheTextAnnonce("Le jeu de " + this.nomJeu[jeu] + " commence ! <br/><p class='rouge'>C'est au tour du joueur ROUGE</p>");
+	document.getElementById("clignotant").className = "";
 	
 /*	document.getElementById(this.nomJeu[jeu]).disabled = true;
 */
@@ -94,6 +95,7 @@ function detectClic(i,j){
 
 		if(verifEnd){
 			this.jeu = false;
+			document.getElementById("clignotant").className = (this.joueur == 1 ? 'cligRouge' : 'cligBleu');
 			afficheTextAnnonce("Le joueur " + nomDuJoueur(this.joueur) + " a gagné la partie.");
 		}else{
 			this.joueur == 1 ? this.joueur = 2 : this.joueur = 1;
@@ -104,6 +106,7 @@ function detectClic(i,j){
 			}
 */			
 			afficheTextAnnonce("C'est au tour du joueur " + nomDuJoueur(this.joueur));
+			document.getElementById("clignotant").className = (this.joueur == 1 ? 'rouge' : 'bleu');
 		}
 	}
 }
