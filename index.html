@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Puissance 4</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+</head>
+<body>
+	<div id="titre">
+		<h1>JEUX de PLATEAU</h1>
+	</div>
+	<p>Choisissez la taille et le score gagnant puis cliquez sur le jeu de votre choix</p>
+	<div id="container">
+		<div class="choix">
+			<label for="size">Taille du plateau </label>
+			<input type="number" name="size" id="size" value=3>
+			<label>lignes et colonnes</label>
+		</div>
+		<div class="choix">
+			<label for="quelscore">Score à atteindre</label>
+			<input type="number" name="quelscore" id="quelscore" value=3>
+			<label>jetons alignés (ligne verticale, horizontale ou diagonale)</label>
+		</div>
+		<div class="choix">
+			<button id="Puissance-4" onclick="newGame(0)">Puissance 4</button>
+			<button id="Tic-tac-toe" onclick="newGame(1)">Tic-tac-toe</button>
+		</div>
+	</div>
+	<div id="textAnnonce"></div>
+	<div id="plateau"></div>
+	<script type="text/javascript" src="assets/js/script.js"></script>
+</body>
+</html>
