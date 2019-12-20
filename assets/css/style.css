@@ -1,200 +1,224 @@
-#titre{
-	text-align: center;
-	background-color:#8BC34A; 
-	border-radius:5px;
+#titre {
+    text-align: center;
+    background-color: #2F83C3;
+    border-radius: 5px;
 }
 
-td{
-	background-color: #8BC34A;
-	width:75px;
-	height:75px;
-	position:relative;
-	margin:5px;
-	text-align: center;
+td {
+    background-color: #2F83C3;
+    width: 75px;
+    height: 75px;
+    position: relative;
+    margin: 5px;
+    text-align: center;
 }
 
-.tictactoe-joueur1:before{
-	content: "X";
-}
-.tictactoe-joueur2:before{
-	content: "X";
-}
-.tictactoe-joueur1{
-	font-family: 'Roboto', sans-serif;
-	display:inline-block;
-	font-weight: bold;
-	font-size:72px;
-	color: red;
+.tictactoe-joueur1:before {
+    content: "X";
 }
 
-.tictactoe-joueur2{
-	font-family: 'Roboto', sans-serif;
-	font-weight: bold;
-	display:inline-block;
-	font-size:72px;
-	color:blue;
+.tictactoe-joueur2:before {
+    content: "X";
 }
 
-.puissance4-joueur1{
-	display:inline-block;
-	background-color: red;
-	border-radius: 50px;
-	width:55px;
-	height:55px;
-	display:inline-block;
-	-webkit-animation: bounceInDown 0.5s 1;
-	        animation: bounceInDown 0.5s 1;  /*definition de l'animation */
+.tictactoe-joueur1 {
+    font-family: 'Roboto', sans-serif;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 72px;
+    color: red;
 }
 
-.puissance4-joueur2{
-	display:inline-block;
-	background-color: blue;
-	border-radius: 50px;
-	width:55px;
-	height:55px;
-	display:inline-block;
-	-webkit-animation: bounceInDown 0.5s 1;
-	        animation: bounceInDown 0.5s 1;  /*definition de l'animation */
+.tictactoe-joueur2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    display: inline-block;
+    font-size: 72px;
+    color: blue;
 }
 
-.choix{
-	margin:5px;	
-	display:inline-block;
+.puissance4-joueur1 {
+    display: inline-block;
+    background-color: red;
+    border-radius: 50px;
+    width: 55px;
+    height: 55px;
+    display: inline-block;
+    -webkit-animation: bounceInDown 0.5s 1;
+    animation: bounceInDown 0.5s 1;
+    /*definition de l'animation */
 }
 
-.choix input{
-	width:4em;
+.puissance4-joueur2 {
+    display: inline-block;
+    background-color: blue;
+    border-radius: 50px;
+    width: 55px;
+    height: 55px;
+    display: inline-block;
+    -webkit-animation: bounceInDown 0.5s 1;
+    animation: bounceInDown 0.5s 1;
+    /*definition de l'animation */
 }
 
-#container{
-	border-radius:5px;
-	background-color: #9BD35A;
-	display:flex;
-	flex-direction: column;
-	align-items:flex-start;
+.choix {
+    margin: 5px;
+    display: inline-block;
 }
 
-#boutons{
-	margin:10px auto;
-}
-#plateau{
-	display:flex;
-	justify-content: center;
-	overflow:hidden; /* extérieur de la div invisible pour que les jetons ne sortent pas du tableau*/
+.choix input {
+    width: 4em;
 }
 
-#textAnnonce{
-	margin:2px;
-	padding:2px;
-	text-align:center;
+#container {
+    border-radius: 5px;
+    background-color: #2F83C3;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#boutons {
+    margin: 10px auto;
+}
+
+#plateau {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    /* extérieur de la div invisible pour que les jetons ne sortent pas du tableau*/
+}
+
+#textAnnonce {
+    margin: 2px;
+    padding: 2px;
+    text-align: center;
 }
 
 .feu {
-	margin-left: auto;
-	margin-right: auto;
-
-	margin-top:5px;
-	background-color:#999;
-	border-radius: 15px;
-	border: 2px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    background-color: #999;
+    border-radius: 15px;
+    border: 2px solid black;
 }
-.noir, .rouge, .bleu{
-	border-radius: 15px;	
+
+.noir,
+.rouge,
+.bleu {
+    border-radius: 15px;
 }
 
 .noir {
-	margin:5px;
-	background-color: #9BD35A;
-	color:black;
+    margin: 5px;
+    background-color: #2F83C3;
+    color: black;
 }
-.rouge{
-	background-color:red;
 
+.rouge {
+    background-color: red;
 }
-.bleu{
-	background-color:blue;
-	
+
+.bleu {
+    background-color: blue;
 }
+
 .cligRouge {
-	position: relative;
-	background-color:red;
-	animation: rouge 0.5s infinite;
+    position: relative;
+    background-color: red;
+    animation: rouge 0.5s infinite;
 }
 
 .cligBleu {
-	position: relative;
-	background-color:blue;
-	animation: clig 0.5s infinite;
+    position: relative;
+    background-color: blue;
+    animation: clig 0.5s infinite;
 }
 
-@-webkit-keyframes clig { 
-	0%   { z-index:-1; }
-	100% { z-index:1; } 
-} 
-@keyframes clig { 
-	0%   { z-index:-1; }
-	100% { z-index:1; } 
+@-webkit-keyframes clig {
+    0% {
+        z-index: -1;
+    }
+    100% {
+        z-index: 1;
+    }
 }
+
+@keyframes clig {
+    0% {
+        z-index: -1;
+    }
+    100% {
+        z-index: 1;
+    }
+}
+
 
 /* déclaration de l'animation */
-@-webkit-keyframes bounceInDown{
-	0%{
-		opacity: 0;  /*invisible*/
-		-webkit-transform:translate3d(0, -3000px, 0);
-		        transform:translate3d(0, -3000px, 0); /* le jeton tombe */
 
- 	}
- 	/* à 60% de l'animation*/
- 	60%{
- 		opacity: 1;  /*visible*/
-		-webkit-transform:translate3d(0, 25px, 0);
-		        transform:translate3d(0, 25px, 0); /* tombe + bas  */
-		
- 	}
- 	75%{
- 		-webkit-transform:translate3d(0, -10px, 0);
- 		        transform:translate3d(0, -10px, 0); /* remonter de 10 px pour le rebond */
-		
- 	}
- 	90%{
- 		-webkit-transform:translate3d(0, 5px, 0);
- 		        transform:translate3d(0, 5px, 0); /* redescendre de 5 px pour le rebond */
-
- 	}
- 	100%{
- 		-webkit-transform:none;
- 		        transform:none; /* aniùation terminée */
-
- 	}
-}
-@keyframes bounceInDown{
-	0%{
-		opacity: 0;  /*invisible*/
-		-webkit-transform:translate3d(0, -3000px, 0);
-		        transform:translate3d(0, -3000px, 0); /* le jeton tombe */
-
- 	}
- 	/* à 60% de l'animation*/
- 	60%{
- 		opacity: 1;  /*visible*/
-		-webkit-transform:translate3d(0, 25px, 0);
-		        transform:translate3d(0, 25px, 0); /* tombe + bas  */
-		
- 	}
- 	75%{
- 		-webkit-transform:translate3d(0, -10px, 0);
- 		        transform:translate3d(0, -10px, 0); /* remonter de 10 px pour le rebond */
-		
- 	}
- 	90%{
- 		-webkit-transform:translate3d(0, 5px, 0);
- 		        transform:translate3d(0, 5px, 0); /* redescendre de 5 px pour le rebond */
-
- 	}
- 	100%{
- 		-webkit-transform:none;
- 		        transform:none; /* aniùation terminée */
-
- 	}
+@-webkit-keyframes bounceInDown {
+    0% {
+        opacity: 0;
+        /*invisible*/
+        -webkit-transform: translate3d(0, -3000px, 0);
+        transform: translate3d(0, -3000px, 0);
+        /* le jeton tombe */
+    }
+    /* à 60% de l'animation*/
+    60% {
+        opacity: 1;
+        /*visible*/
+        -webkit-transform: translate3d(0, 25px, 0);
+        transform: translate3d(0, 25px, 0);
+        /* tombe + bas  */
+    }
+    75% {
+        -webkit-transform: translate3d(0, -10px, 0);
+        transform: translate3d(0, -10px, 0);
+        /* remonter de 10 px pour le rebond */
+    }
+    90% {
+        -webkit-transform: translate3d(0, 5px, 0);
+        transform: translate3d(0, 5px, 0);
+        /* redescendre de 5 px pour le rebond */
+    }
+    100% {
+        -webkit-transform: none;
+        transform: none;
+        /* aniùation terminée */
+    }
 }
 
+@keyframes bounceInDown {
+    0% {
+        opacity: 0;
+        /*invisible*/
+        -webkit-transform: translate3d(0, -3000px, 0);
+        transform: translate3d(0, -3000px, 0);
+        /* le jeton tombe */
+    }
+    /* à 60% de l'animation*/
+    60% {
+        opacity: 1;
+        /*visible*/
+        -webkit-transform: translate3d(0, 25px, 0);
+        transform: translate3d(0, 25px, 0);
+        /* tombe + bas  */
+    }
+    75% {
+        -webkit-transform: translate3d(0, -10px, 0);
+        transform: translate3d(0, -10px, 0);
+        /* remonter de 10 px pour le rebond */
+    }
+    90% {
+        -webkit-transform: translate3d(0, 5px, 0);
+        transform: translate3d(0, 5px, 0);
+        /* redescendre de 5 px pour le rebond */
+    }
+    100% {
+        -webkit-transform: none;
+        transform: none;
+        /* aniùation terminée */
+    }
+}
